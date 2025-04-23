@@ -1,0 +1,129 @@
+/* Обнуляем отступы и настраиваем box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные настройки */
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #f6f8fa;
+    color: #2d2d2d;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #d0d0d0;
+}
+
+/* Основной контейнер новостей */
+.news-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Карточки новостей */
+.news-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.news-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.news-card a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card a:hover {
+    text-decoration: underline;
+}
+
+/* Детали новости */
+#news-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    display: none;
+}
+
+#news-detail.show {
+    display: block;
+}
+
+#news-detail h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#news-detail p {
+    font-size: 16px;
+    color: #333;
+}
+
+#news-detail button {
+    margin-top: 25px;
+    padding: 10px 22px;
+    font-size: 15px;
+    border: none;
+    background-color: #1a1a2e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#news-detail button:hover {
+    background-color: #333;
+}
+
+/* Футер */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 14px;
+}
